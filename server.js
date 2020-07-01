@@ -11,11 +11,11 @@ const ejs = require("ejs")
 
 const resolve = dir => path.resolve(__dirname,dir)
 
-let fileList = fs.readdirSync("../code-project");
+let fileList = fs.readdirSync("./");
 let routes = [];
 fileList.forEach(v =>{
     let file = fs.statSync(path.resolve(__dirname,v));
-    if (file.isDirectory() && v !== ".idea" && v !== "node_modules"){
+    if (file.isDirectory() && v !== ".idea" && v !== "node_modules" && v !== ".git"){
         routes.push(v)
     }
 })

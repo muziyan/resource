@@ -6,8 +6,38 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tetris</title>
+    <link rel="stylesheet" href="./public/css/style.css">
 </head>
 <body>
-    asfasdf
+    <div id="tetris">
+        <div id="start">
+            <div class="logo"></div>
+            <button class="btn start-btn">Start Game</button>
+        </div>
+
+        <section class="panel">
+            <div class="time">time:<span>0</span></div>
+            <button class="btn pause-btn">pause</button>
+            <div class="score">score:<span>0</span></div>
+        </section>
+
+        <div id="game"></div>
+
+        <div id="over">
+
+        </div>
+    </div>
 </body>
+<script>
+    localStorage.user = JSON.stringify({
+        username:"test",
+    })
+
+    localStorage.user = JSON.stringify({
+        username:"test1",
+    })
+
+    console.log(JSON.parse(localStorage.user).username)
+</script>
+<script type="module" src="./public/js/main.js"></script>
 </html>
